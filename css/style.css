@@ -120,6 +120,11 @@ a {
   text-decoration: underline;
 }
 
+/* Global Paragraph Spacing */
+p {
+  margin-bottom: 1.5em;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   header {
