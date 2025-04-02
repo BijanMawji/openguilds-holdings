@@ -64,6 +64,7 @@ nav ul li a {
   display: flex;
   align-items: center;
   justify-content: center;
+  /* Default padding includes top spacing so content isn't hidden behind the header */
   padding: 100px 20px 50px;
   text-align: center;
 }
@@ -77,8 +78,8 @@ nav ul li a {
 
 /* Paragraph Spacing and Readability */
 p {
-  margin-bottom: 2em;       /* Increase spacing between paragraphs */
-  line-height: 1.7;         /* Slightly taller line spacing for readability */
+  margin-bottom: 2em;
+  line-height: 1.7;
 }
 
 /* Glitch effect for main heading */
@@ -144,8 +145,9 @@ a {
     right: 10px;
   }
 
+  /* Increase top padding on sections to prevent overlap from the fixed navbar */
   .section {
-    padding: 80px 10px 20px;
+    padding: 120px 10px 20px;
   }
 
   /* Reduce container side padding on tablets */
@@ -161,7 +163,6 @@ a {
     font-size: 1.5em;
   }
 
-  /* Adjust paragraph spacing a bit on smaller screens if desired */
   p {
     margin-bottom: 1.8em;
   }
@@ -177,7 +178,6 @@ a {
     padding: 0 1.5rem;
   }
 
-  /* Adjust paragraph spacing again if needed */
   p {
     margin-bottom: 1.6em;
   }
