@@ -71,6 +71,14 @@ nav ul li a {
 .container {
   max-width: 800px;
   margin: 0 auto;
+  /* Added padding for extra space on larger screens */
+  padding: 0 2rem;
+}
+
+/* Paragraph Spacing and Readability */
+p {
+  margin-bottom: 2em;       /* Increase spacing between paragraphs */
+  line-height: 1.7;         /* Slightly taller line spacing for readability */
 }
 
 /* Glitch effect for main heading */
@@ -120,11 +128,6 @@ a {
   text-decoration: underline;
 }
 
-/* Global Paragraph Spacing */
-p {
-  margin-bottom: 1.5em;
-}
-
 /* Responsive Styles */
 @media (max-width: 768px) {
   header {
@@ -145,12 +148,22 @@ p {
     padding: 80px 10px 20px;
   }
 
+  /* Reduce container side padding on tablets */
+  .container {
+    padding: 0 1.5rem;
+  }
+
   h1.glitch {
     font-size: 2em;
   }
 
   h2 {
     font-size: 1.5em;
+  }
+
+  /* Adjust paragraph spacing a bit on smaller screens if desired */
+  p {
+    margin-bottom: 1.8em;
   }
 }
 
@@ -160,6 +173,12 @@ p {
   }
   
   .container {
-    padding: 0 10px;
+    /* Increase side padding on very small screens */
+    padding: 0 1.5rem;
+  }
+
+  /* Adjust paragraph spacing again if needed */
+  p {
+    margin-bottom: 1.6em;
   }
 }
