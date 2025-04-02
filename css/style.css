@@ -1,0 +1,121 @@
+/* Reset and basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Dark and light mode settings */
+.dark-mode {
+  background: #000;
+  color: #fff;
+}
+
+.light-mode {
+  background: #f4f4f4;
+  color: #222;
+}
+
+/* Header and Navigation */
+header {
+  background: transparent;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#mode-toggle {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: none;
+  border: 1px solid currentColor;
+  color: inherit;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* Section Styles */
+.section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px 50px;
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Glitch effect for main heading */
+h1.glitch {
+  font-size: 3em;
+  position: relative;
+}
+
+h1.glitch::before,
+h1.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.8;
+  clip: rect(0, 900px, 0, 0);
+}
+
+h1.glitch::before {
+  animation: glitch 2s infinite linear alternate-reverse;
+  color: red;
+}
+
+h1.glitch::after {
+  animation: glitch 3s infinite linear alternate-reverse;
+  color: blue;
+}
+
+@keyframes glitch {
+  0% { clip: rect(42px, 9999px, 44px, 0); }
+  20% { clip: rect(12px, 9999px, 16px, 0); }
+  40% { clip: rect(82px, 9999px, 86px, 0); }
+  60% { clip: rect(32px, 9999px, 36px, 0); }
+  80% { clip: rect(62px, 9999px, 66px, 0); }
+  100% { clip: rect(22px, 9999px, 26px, 0); }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
